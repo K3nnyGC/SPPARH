@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FE46B72E-AB7D-BF16-B9D5-EB0B2407340B" name="Node_user">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:25:41 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_user" id="704A2A5B-80A8-F39C-7917-864C44DFD4C3">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:26:13 UTC</createdTime>
+<generatorID>058B1899-6ADD-7591-A0E4-728DF3DA1DFC</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>474E2BD4-9673-1523-A714-3AF800DFFBC3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ADCD5D76-C9CC-E23D-7D02-5076EA977A40" name="Node_user PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:26:13 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>704A2A5B-80A8-F39C-7917-864C44DFD4C3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

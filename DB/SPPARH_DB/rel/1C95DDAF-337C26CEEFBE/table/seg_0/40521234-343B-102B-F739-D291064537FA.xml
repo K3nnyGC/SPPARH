@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40521234-343B-102B-F739-D291064537FA" name="Student">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>779426E6-45DC-3FA1-E24B-9D0543DB2377</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="9389BFC9-4D4D-C552-21DD-03027B0FAC24">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>E015A934-FE21-2067-9B02-91600AAD335C</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1D6BB42-A93A-34BA-3330-5EED488EDF18" referredColumn="FCFABB16-FF6F-BEBF-5D30-3397D6EA83D0"/>
+</associations>
+</Column>
+<Column name="birthdate" id="E5FDCD11-81AF-EF07-554B-0006CCCA5E37">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>0E7D305F-C4C7-532E-0D99-AFA2F594CB99</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E313D748-ACB6-7E4B-F073-A0473088EBF7" name="Student_PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>8FDB5114-4A8C-ACE8-58D7-0B8248E3445A</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9389BFC9-4D4D-C552-21DD-03027B0FAC24"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27972072-9231-D7B9-A627-5B8AD216FBA2" name="Student_User_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>8509A62C-61E6-CF21-CEDA-F190BFEC2325</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9389BFC9-4D4D-C552-21DD-03027B0FAC24"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A68A0505-9EEB-FBFD-6B7E-0785ACEC265F" name="Transactions">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>3CAC2BBB-6E2C-7287-E3E0-B1458432BDD5</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<abbreviation>Transactions</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_contract" id="535D1776-8634-F088-C4D4-038AD19563BF">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>12D2EA4F-F0B2-4A5B-35C9-1B8E58676115</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B54034EB-69B4-A66B-417E-D141D481F938" referredColumn="9BA71CF7-C5B7-E0B1-4240-EEA860F81A83"/>
+</associations>
+</Column>
+<Column name="id_document" id="20F88C14-0190-03D6-A3AF-4001BFC0ED9E">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>45F517C9-5058-58AF-935A-F82284399212</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7CFAD8F-93FF-A8A2-E0EB-966128D1C2F5" referredColumn="C5A2C05B-3E28-C304-12E4-594874DB9C78"/>
+</associations>
+</Column>
+<Column name="created_date" id="353AEA63-3408-3819-979D-4993DE011365">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>167D4390-C8FD-0521-9B3D-8093CA2E3556</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF6AF1F6-8F28-FA60-8FDB-A94698F47177" name="Transactions_PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>6393178A-9167-DB37-970C-1008B34C629A</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="535D1776-8634-F088-C4D4-038AD19563BF"/>
+<colUsage columnID="20F88C14-0190-03D6-A3AF-4001BFC0ED9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5664D1C3-6851-A7E6-F0D2-6BD7B5C776FE" name="Transactions_Document_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>B684FD02-6CC0-F2D9-6F81-DE12C162C8E8</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20F88C14-0190-03D6-A3AF-4001BFC0ED9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7436457F-7BD1-0E09-4802-E520541791EA" name="Transactions_Contract_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>E83DC484-685C-58C6-C1FA-8EA2767D79FF</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="535D1776-8634-F088-C4D4-038AD19563BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

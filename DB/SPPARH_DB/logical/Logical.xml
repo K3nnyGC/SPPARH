@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="50E0C784-3F30-9A9A-9346-774DD6128570" mainViewID="8CC6F880-1DA5-E815-144E-64EE0D3C7A50">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 15:45:29 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

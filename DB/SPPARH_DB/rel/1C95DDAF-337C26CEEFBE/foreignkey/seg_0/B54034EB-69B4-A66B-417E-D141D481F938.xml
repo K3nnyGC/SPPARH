@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B54034EB-69B4-A66B-417E-D141D481F938" containerWithKeyObject="A68A0505-9EEB-FBFD-6B7E-0785ACEC265F" localFKIndex="7436457F-7BD1-0E09-4802-E520541791EA" name="Transactions_Contract_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>E83DC484-685C-58C6-C1FA-8EA2767D79FF</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<referredTableLongName>Contract</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BF4976CE-DC42-EF87-CB63-5D415BA997B0</referredTableID>
+<keyObject>36C456C4-935D-FED9-8F02-DC234A4F9F2C</keyObject>
+<referredKeyID>36C456C4-935D-FED9-8F02-DC234A4F9F2C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Service_id_service,id_contract,User_id_user</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

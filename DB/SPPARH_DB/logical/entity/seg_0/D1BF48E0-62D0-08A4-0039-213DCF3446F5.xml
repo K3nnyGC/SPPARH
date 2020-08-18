@@ -1,0 +1,175 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D1BF48E0-62D0-08A4-0039-213DCF3446F5" name="Document">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:57:23 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_document" id="924D07DB-1EFC-7769-0945-6CDBE96C4974">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:57:42 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_institute" id="DCC04198-AC13-CEB4-CB10-7AB2D143E8A3">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:08:17 UTC</createdTime>
+<generatorID>6994A5B2-DB7C-C2E4-A313-F2DD99C9A61E</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>8E7E641F-8E37-6F66-D9DC-05A2238F273F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_student" id="03C8980B-E659-26B1-EBA0-5D7A33B2C7B6">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:08:23 UTC</createdTime>
+<generatorID>515D6335-2C70-DB95-254D-2C57C858A861</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E015A934-FE21-2067-9B02-91600AAD335C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="86022A73-14CE-32FE-7189-7F8497B22DEE">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:04:58 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 CHAR</dataTypeSize>
+<ownDataTypeParameters>256 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="notes" id="49DAABF0-95AE-F585-1E4B-4B6E803E9409">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:03:36 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="route_file" id="63C675C2-6A26-6D9F-950B-B7AAB62E4CF8">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:04:07 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emited_date" id="C849EF1E-53B0-8EFB-621C-0E0A4C51DC42">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:06:31 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="CCA33D34-F0B3-499C-152C-D55A293D74F2">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:59:38 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="edited_date" id="F07E9DDA-0A5E-0699-8994-97E02662A935">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:02:59 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created_date" id="00B032DF-C530-3C85-C2AE-7E5E9F1C8056">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:03:18 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_document_before" id="3E1C3A82-59C6-3D31-5605-141209324F12">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 05:26:55 UTC</createdTime>
+<generatorID>37754069-452A-99F1-D1B2-946CFBC20242</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>924D07DB-1EFC-7769-0945-6CDBE96C4974</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1B6E4AEB-2F84-B31F-36B9-AD1E933BD594" name="document PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:57:58 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>924D07DB-1EFC-7769-0945-6CDBE96C4974</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

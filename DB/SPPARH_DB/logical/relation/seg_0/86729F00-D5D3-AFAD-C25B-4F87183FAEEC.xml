@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="contract_service" directorySegmentName="seg_0" id="86729F00-D5D3-AFAD-C25B-4F87183FAEEC">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:06:11 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<sourcePk>B47A3695-2890-9052-A6EE-F48FA0048138</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DC03D653-F2C4-80BC-B1D7-2CD88432172F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2ADAB44E-A66F-1D7F-6F12-724EF8D83561</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

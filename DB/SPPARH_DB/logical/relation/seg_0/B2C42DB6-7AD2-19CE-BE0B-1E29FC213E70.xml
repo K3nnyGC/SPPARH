@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="certificate_dcument" directorySegmentName="seg_0" id="B2C42DB6-7AD2-19CE-BE0B-1E29FC213E70">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:58:07 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<sourcePk>1B6E4AEB-2F84-B31F-36B9-AD1E933BD594</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D1BF48E0-62D0-08A4-0039-213DCF3446F5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1DD16B3B-1BBC-8984-7225-BB5123363F8E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

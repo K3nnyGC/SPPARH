@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="223190B4-0195-41BE-C468-D8C244E414FE" name="Node_user">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>FE46B72E-AB7D-BF16-B9D5-EB0B2407340B</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="BB20E748-E982-E37A-DF64-421D1953B306">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>704A2A5B-80A8-F39C-7917-864C44DFD4C3</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BFC47EED-1E24-79BF-97D8-992F895E05E2" referredColumn="FCFABB16-FF6F-BEBF-5D30-3397D6EA83D0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F0F0B330-982D-79F2-69EB-591003952F52" name="Node_user_PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>ADCD5D76-C9CC-E23D-7D02-5076EA977A40</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB20E748-E982-E37A-DF64-421D1953B306"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A72CF7A-F9ED-36EC-A6AA-FDD879C9F339" name="Node_user_User_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>058B1899-6ADD-7591-A0E4-728DF3DA1DFC</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB20E748-E982-E37A-DF64-421D1953B306"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

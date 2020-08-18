@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6C722834-286F-73B2-EEBE-7924551CC1C1" name="sign">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>1D7406F2-4D2C-CDC1-2084-80371368C67C</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<abbreviation>sign</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_sign" id="351A8120-B099-1764-6788-B959950D15EB">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>EB1B69FB-8A86-9293-08B8-F4FE1E1BC8E2</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_user" id="5B936212-DAC3-4FB9-0A3F-9C39419B51CA">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>F819B610-1701-85E9-8A4A-BC8960BE55AB</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7C8BAC5-5355-5713-6D5E-23211296896D" referredColumn="AB8C0A37-8E91-889C-B389-4B32B8175079"/>
+</associations>
+</Column>
+<Column name="route_key_public" id="5DBE0DD5-4B6A-6A11-6C2C-322F05935688">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>76182FEC-D2CB-524B-26E9-26839E1F45EC</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="route_key_private" id="0E2E1E40-BDEC-CA4F-58DD-78F5A8563B5F">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>7796AD85-212E-9678-0F12-E59BFD3C6B20</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="due_date" id="7BB2773D-1FA0-AAF7-6FE9-E5675F0768C6">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>108D5A4B-FEEA-5479-F4A7-61DCEE52CA2F</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="edited_date" id="B5F2FD0B-3A92-9603-8DB5-506F6808347E">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>307830B4-4881-9F36-4B27-48EE7A98D111</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_date" id="4298734B-6BDB-78BE-6C95-ECB40979297E">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>FA7D50AD-4F33-56CA-5DF4-5DE3A731E25F</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B46239DF-8C4B-16C2-EF28-70AD7C378F2E" name="sign_PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>67C23902-1017-7CE6-45C0-7801B1BB74A2</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="351A8120-B099-1764-6788-B959950D15EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="592AF710-34D3-514C-0D1F-C21178009479" name="sign_Institute_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:38 UTC</createdTime>
+<generatorID>E92C33A7-8792-61BA-94A5-683BB1A8BFD6</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B936212-DAC3-4FB9-0A3F-9C39419B51CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

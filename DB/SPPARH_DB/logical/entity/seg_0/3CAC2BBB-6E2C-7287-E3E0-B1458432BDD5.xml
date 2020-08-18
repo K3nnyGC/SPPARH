@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3CAC2BBB-6E2C-7287-E3E0-B1458432BDD5" name="Transactions">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 15:55:13 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>Transactions</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_contract" id="12D2EA4F-F0B2-4A5B-35C9-1B8E58676115">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:29:27 UTC</createdTime>
+<generatorID>E83DC484-685C-58C6-C1FA-8EA2767D79FF</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>47A9EAD4-9412-E030-4054-BC85A9310099</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_document" id="45F517C9-5058-58AF-935A-F82284399212">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:11:57 UTC</createdTime>
+<generatorID>B684FD02-6CC0-F2D9-6F81-DE12C162C8E8</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>924D07DB-1EFC-7769-0945-6CDBE96C4974</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created_date" id="167D4390-C8FD-0521-9B3D-8093CA2E3556">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:25:38 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6393178A-9167-DB37-970C-1008B34C629A" name="Transactions PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 16:07:17 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>12D2EA4F-F0B2-4A5B-35C9-1B8E58676115</attributeRef>
+<attributeRef>45F517C9-5058-58AF-935A-F82284399212</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

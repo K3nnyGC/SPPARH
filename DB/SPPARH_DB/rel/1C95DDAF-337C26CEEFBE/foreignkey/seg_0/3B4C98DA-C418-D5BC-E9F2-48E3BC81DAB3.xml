@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3B4C98DA-C418-D5BC-E9F2-48E3BC81DAB3" containerWithKeyObject="BF4976CE-DC42-EF87-CB63-5D415BA997B0" localFKIndex="71A5D3A0-9C0B-F994-A798-A0A030CDEE80" name="Contract_Payment_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>5CAA2421-B3B7-D303-D596-EE824647215A</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<referredTableLongName>Payment</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A1E4A6C2-01A3-C6CD-0F74-D6CC73FF0630</referredTableID>
+<keyObject>AF8299E1-AAF3-64F2-9E13-D73E7B1A3D77</keyObject>
+<referredKeyID>AF8299E1-AAF3-64F2-9E13-D73E7B1A3D77</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_payment</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

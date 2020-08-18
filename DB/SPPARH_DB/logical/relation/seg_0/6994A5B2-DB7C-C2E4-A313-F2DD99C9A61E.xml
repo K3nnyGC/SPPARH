@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="document_institute" directorySegmentName="seg_0" id="6994A5B2-DB7C-C2E4-A313-F2DD99C9A61E">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:01:48 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<sourcePk>70C28C0F-4126-D456-3251-0373B5082FA2</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>83A7FCB3-8E48-985C-4FCC-175BAFB867A3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D1BF48E0-62D0-08A4-0039-213DCF3446F5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="SPPARH_DB" id="76093800-16F3-01F2-ECA3-02BE3B9446ED" version="3.5">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 15:45:29 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>76093800-16F3-01F2-ECA3-02BE3B9446ED</designId>
+</OSDM_Design>

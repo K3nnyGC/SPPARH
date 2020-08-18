@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D7C8BAC5-5355-5713-6D5E-23211296896D" containerWithKeyObject="6C722834-286F-73B2-EEBE-7924551CC1C1" localFKIndex="592AF710-34D3-514C-0D1F-C21178009479" name="sign_Institute_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:38 UTC</createdTime>
+<generatorID>E92C33A7-8792-61BA-94A5-683BB1A8BFD6</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<referredTableLongName>Institute</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0B7C802A-8C00-F789-09A8-2DB11B186A19</referredTableID>
+<keyObject>5EF3AC4E-A545-0272-8679-6EB8E2753DD0</keyObject>
+<referredKeyID>5EF3AC4E-A545-0272-8679-6EB8E2753DD0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>User_id_user</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

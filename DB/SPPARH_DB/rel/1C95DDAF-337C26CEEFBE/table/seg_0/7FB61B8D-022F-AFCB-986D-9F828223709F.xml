@@ -1,0 +1,196 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7FB61B8D-022F-AFCB-986D-9F828223709F" name="Document">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>D1BF48E0-62D0-08A4-0039-213DCF3446F5</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_document" id="C5A2C05B-3E28-C304-12E4-594874DB9C78">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>924D07DB-1EFC-7769-0945-6CDBE96C4974</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_institute" id="8B2AFEBD-4737-10D8-251B-08B28845C6A9">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>DCC04198-AC13-CEB4-CB10-7AB2D143E8A3</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="041843C1-8C14-0BFE-B3E6-4F64DAD35DFA" referredColumn="AB8C0A37-8E91-889C-B389-4B32B8175079"/>
+</associations>
+</Column>
+<Column name="id_student" id="AB5A0BC5-D9B8-A21E-81F7-5E39F74F299C">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>03C8980B-E659-26B1-EBA0-5D7A33B2C7B6</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A32B6F70-8E58-1E59-42FD-E85ACA3410E5" referredColumn="9389BFC9-4D4D-C552-21DD-03027B0FAC24"/>
+</associations>
+</Column>
+<Column name="status" id="8623776D-6CA5-DB94-619E-4C2A38AFBB96">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>CCA33D34-F0B3-499C-152C-D55A293D74F2</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="0ECADE7E-4D1F-18DD-7335-1825577D751C">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>86022A73-14CE-32FE-7189-7F8497B22DEE</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256 CHAR</dataTypeSize>
+<ownDataTypeParameters>256 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="notes" id="47A93BC7-69B8-3C95-2227-422D3C8B39EF">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>49DAABF0-95AE-F585-1E4B-4B6E803E9409</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="route_file" id="E43E288A-0CE0-CFC9-982E-9545F600DB3D">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>63C675C2-6A26-6D9F-950B-B7AAB62E4CF8</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emited_date" id="93249056-5DB3-B5F4-2F2F-3C49A8FD4772">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>C849EF1E-53B0-8EFB-621C-0E0A4C51DC42</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_document_before" id="21814FD8-8900-830D-5DA4-CA6EB18CEE6B">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>3E1C3A82-59C6-3D31-5605-141209324F12</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="161205C9-43BD-7220-C9A6-B197587E4CC8" referredColumn="C5A2C05B-3E28-C304-12E4-594874DB9C78"/>
+</associations>
+</Column>
+<Column name="edited_date" id="ECE4B21E-33A9-995A-2FF1-8917801FDEB4">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>F07E9DDA-0A5E-0699-8994-97E02662A935</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_date" id="E64B4A6F-230C-9796-F4E6-9F927E0F6624">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>00B032DF-C530-3C85-C2AE-7E5E9F1C8056</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF373951-AF76-477A-5C1A-BB3B6F84177F" name="Document_PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>1B6E4AEB-2F84-B31F-36B9-AD1E933BD594</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5A2C05B-3E28-C304-12E4-594874DB9C78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2632A28A-850C-AEAD-53F4-4E0522AC6210" name="Document_Institute_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:38 UTC</createdTime>
+<generatorID>6994A5B2-DB7C-C2E4-A313-F2DD99C9A61E</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B2AFEBD-4737-10D8-251B-08B28845C6A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66670139-CAC6-D60C-6DBA-4C6B03848FCC" name="Document_Student_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:38 UTC</createdTime>
+<generatorID>515D6335-2C70-DB95-254D-2C57C858A861</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB5A0BC5-D9B8-A21E-81F7-5E39F74F299C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E410933-2E3A-D82C-532C-1608999D4A66" name="Document_Document_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>37754069-452A-99F1-D1B2-946CFBC20242</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21814FD8-8900-830D-5DA4-CA6EB18CEE6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

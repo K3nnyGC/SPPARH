@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF4976CE-DC42-EF87-CB63-5D415BA997B0" name="Contract">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>2ADAB44E-A66F-1D7F-6F12-724EF8D83561</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<abbreviation>Contract</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_contract" id="9BA71CF7-C5B7-E0B1-4240-EEA860F81A83">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>47A9EAD4-9412-E030-4054-BC85A9310099</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_service" id="549ABDDF-3A4C-2EA6-46A7-F91FC5387256">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>A4482244-0023-C52D-183A-04D3687E1CE4</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CCF11B8E-E5E6-CA43-B03F-7C7C11F75049" referredColumn="2D57A671-BEE3-D275-1E33-38FC0AC3335E"/>
+</associations>
+</Column>
+<Column name="id_payment" id="13F79117-008B-7D5F-4828-93E68967D479">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>FD08FFFE-79A2-FC4D-B2B9-33235D7D7BD7</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B4C98DA-C418-D5BC-E9F2-48E3BC81DAB3" referredColumn="A72BC91C-4043-F65F-4A3E-DC4FADEB163F"/>
+</associations>
+</Column>
+<Column name="num_request" id="DB440A8B-7467-5FC4-B676-56BDC1602E08">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>54FC097A-958D-3D54-35E0-BA7B7D4232F3</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="init_date" id="BD082249-923C-2B22-AE9F-E8150F5F09D2">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>5AB6BE84-267A-9529-8CAA-E32DE07AA1E1</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="due_date" id="40B1F5C0-1DC8-ABC9-D51A-74EE617009B1">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>18F81D08-C49A-E535-0039-D1CE3CF5AFF4</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_date" id="5D62656A-9F1B-3DAE-EF5A-34EE4E5763E4">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>644033B4-D470-3B5D-C0F7-9B28A7DFBB2D</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36C456C4-935D-FED9-8F02-DC234A4F9F2C" name="Contract_PK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:37 UTC</createdTime>
+<generatorID>6544D326-7856-FA55-A549-9CE03DB88AD1</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BA71CF7-C5B7-E0B1-4240-EEA860F81A83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82C1BD87-8E00-F987-F408-901F30DD1E4C" name="Contract_Service_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>86729F00-D5D3-AFAD-C25B-4F87183FAEEC</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="549ABDDF-3A4C-2EA6-46A7-F91FC5387256"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71A5D3A0-9C0B-F994-A798-A0A030CDEE80" name="Contract_Payment_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>5CAA2421-B3B7-D303-D596-EE824647215A</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13F79117-008B-7D5F-4828-93E68967D479"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

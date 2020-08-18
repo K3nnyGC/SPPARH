@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C7CFAD8F-93FF-A8A2-E0EB-966128D1C2F5" containerWithKeyObject="A68A0505-9EEB-FBFD-6B7E-0785ACEC265F" localFKIndex="5664D1C3-6851-A7E6-F0D2-6BD7B5C776FE" name="Transactions_Document_FK">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 17:30:39 UTC</createdTime>
+<generatorID>B684FD02-6CC0-F2D9-6F81-DE12C162C8E8</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<referredTableLongName>Document</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7FB61B8D-022F-AFCB-986D-9F828223709F</referredTableID>
+<keyObject>BF373951-AF76-477A-5C1A-BB3B6F84177F</keyObject>
+<referredKeyID>BF373951-AF76-477A-5C1A-BB3B6F84177F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_document,Institute_id_user</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

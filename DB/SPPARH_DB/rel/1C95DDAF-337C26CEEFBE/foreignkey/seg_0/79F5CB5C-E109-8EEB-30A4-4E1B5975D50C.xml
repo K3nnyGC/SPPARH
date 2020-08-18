@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="79F5CB5C-E109-8EEB-30A4-4E1B5975D50C" containerWithKeyObject="4A4826CB-F72E-2D67-CA4E-AD2A0DBC2C75" localFKIndex="188D95B6-E070-741B-310A-81DAE80F12B7" name="Service_User_FKv1">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-18 07:55:17 UTC</createdTime>
+<generatorID>7551D5AB-5D98-DC97-CBAF-C9985792D7FE</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<referredTableLongName>User</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>93991B6B-C339-2518-CDD1-1680C51A5009</referredTableID>
+<keyObject>1AAE4629-9432-597C-24EE-19A7DB3F77FF</keyObject>
+<referredKeyID>1AAE4629-9432-597C-24EE-19A7DB3F77FF</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_user</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
