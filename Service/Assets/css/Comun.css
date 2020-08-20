@@ -1,0 +1,77 @@
+:root{
+	--dark-primary-color: #ffa000; /*Background*/
+	--default-primary-color: #ffc107; /*Background*/
+	--light-primary-color: #ffecb3; /*Background*/
+	--text-primary-color: #212121; /*Color de texto*/
+	--accent-color: #18ffff; /*Background*/
+	--primary-text-color: #212121; /*Color de texto*/
+	--secondary-text-color: #757575; /*Color de texto*/
+	--divider-color: #BDBDBD; /*Color de borde*/
+	--neutral-color: white; /*Blanco*/
+	--lighting-accent-color: #fff59d; /*Background*/
+}
+
+/*Background*/
+.BG--dark-primary-color{
+	background-color: var(--dark-primary-color) !important;
+}
+.BG--default-primary-color{
+	background-color: var(--default-primary-color) !important;
+}
+.BG--light-primary-color{
+	background-color: var(--light-primary-color) !important;
+}
+.BG--text-primary-color{
+	background-color: var(--text-primary-color) !important;
+}
+.BG--accent-color{
+	background-color: var(--accent-color) !important;
+}
+.BG--primary-text-color{
+	background-color: var(--primary-text-color) !important;
+}
+.BG--secondary-text-color{
+	background-color: var(--secondary-text-color) !important;
+}
+.BG--divider-color{
+	background-color: var(--divider-color) !important;
+}
+.BG--neutral-color{
+	background-color: var(--neutral-color) !important;
+}
+.BG--lighting-accent-color{
+	background-color: var(--lighting-accent-color) !important;
+}
+
+/*Color-Text*/
+
+.COLOR--dark-primary-color{
+	color: var(--dark-primary-color) !important;
+}
+.COLOR--default-primary-color{
+	color: var(--default-primary-color) !important;
+}
+.COLOR--light-primary-color{
+	color: var(--light-primary-color) !important;
+}
+.COLOR--text-primary-color{
+	color: var(--text-primary-color) !important;
+}
+.COLOR--accent-color{
+	color: var(--accent-color) !important;
+}
+.COLOR--primary-text-color{
+	color: var(--primary-text-color) !important;
+}
+.COLOR--secondary-text-color{
+	color: var(--secondary-text-color) !important;
+}
+.COLOR--divider-color{
+	color: var(--divider-color) !important;
+}
+.COLOR--neutral-color{
+	color: var(--neutral-color) !important;
+}
+.COLOR--lighting-accent-color{
+	color: var(--lighting-accent-color) !important;
+}
