@@ -1,14 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 18-08-2020 a las 09:47:23
--- Versión del servidor: 5.5.24-log
--- Versión de PHP: 5.4.3
+-- Servidor: 10.2.1.123
+-- Tiempo de generación: 19-08-2020 a las 23:01:43
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.2.32
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT=0;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -16,10 +16,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `prueba`
+-- Base de datos: `u494946663_spparh`
 --
 
 -- --------------------------------------------------------
@@ -29,18 +29,15 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS `certificate`;
-CREATE TABLE IF NOT EXISTS `certificate` (
-  `id_certificate` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `certificate` (
+  `id_certificate` int(11) NOT NULL,
   `sign_id_sign` int(11) NOT NULL,
   `id_document` int(11) NOT NULL,
   `node_hash` varchar(256) DEFAULT NULL,
   `route_signed_file` text NOT NULL,
   `edited_date` datetime DEFAULT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_certificate`),
-  KEY `Certificate_Document_FK` (`id_document`),
-  KEY `Certificate_sign_FK` (`sign_id_sign`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -49,18 +46,15 @@ CREATE TABLE IF NOT EXISTS `certificate` (
 --
 
 DROP TABLE IF EXISTS `contract`;
-CREATE TABLE IF NOT EXISTS `contract` (
-  `id_contract` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `contract` (
+  `id_contract` int(11) NOT NULL,
   `id_service` int(11) NOT NULL,
   `id_payment` int(11) NOT NULL,
   `num_request` int(11) NOT NULL,
   `init_date` datetime NOT NULL,
   `due_date` datetime NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_contract`),
-  KEY `Contract_Payment_FK` (`id_payment`),
-  KEY `Contract_Service_FK` (`id_service`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -69,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `contract` (
 --
 
 DROP TABLE IF EXISTS `document`;
-CREATE TABLE IF NOT EXISTS `document` (
-  `id_document` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `document` (
+  `id_document` int(11) NOT NULL,
   `id_institute` int(11) NOT NULL,
   `id_student` int(11) DEFAULT NULL,
   `status` int(11) NOT NULL,
@@ -80,12 +74,8 @@ CREATE TABLE IF NOT EXISTS `document` (
   `emited_date` datetime NOT NULL,
   `id_document_before` int(11) DEFAULT NULL,
   `edited_date` datetime DEFAULT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_document`),
-  KEY `Document_Document_FK` (`id_document_before`),
-  KEY `Document_Institute_FK` (`id_institute`),
-  KEY `Document_Student_FK` (`id_student`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -94,13 +84,12 @@ CREATE TABLE IF NOT EXISTS `document` (
 --
 
 DROP TABLE IF EXISTS `institute`;
-CREATE TABLE IF NOT EXISTS `institute` (
+CREATE TABLE `institute` (
   `id_user` int(11) NOT NULL,
   `RUC` varchar(21) NOT NULL,
   `legal_name` varchar(256) NOT NULL,
   `comercial_name` varchar(256) NOT NULL,
-  `address` varchar(256) NOT NULL,
-  PRIMARY KEY (`id_user`)
+  `address` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -110,9 +99,8 @@ CREATE TABLE IF NOT EXISTS `institute` (
 --
 
 DROP TABLE IF EXISTS `node_user`;
-CREATE TABLE IF NOT EXISTS `node_user` (
-  `id_user` int(11) NOT NULL,
-  PRIMARY KEY (`id_user`)
+CREATE TABLE `node_user` (
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -122,18 +110,30 @@ CREATE TABLE IF NOT EXISTS `node_user` (
 --
 
 DROP TABLE IF EXISTS `payment`;
-CREATE TABLE IF NOT EXISTS `payment` (
-  `id_payment` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `payment` (
+  `id_payment` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `due_date` datetime NOT NULL,
   `amount` double NOT NULL,
   `igv` double NOT NULL,
   `total_amount` double NOT NULL,
   `status` int(11) NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_payment`),
-  KEY `Payment_User_FK` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `role`
+--
+
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE `role` (
+  `id_role` int(11) NOT NULL,
+  `id_name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_level` int(11) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -142,19 +142,16 @@ CREATE TABLE IF NOT EXISTS `payment` (
 --
 
 DROP TABLE IF EXISTS `service`;
-CREATE TABLE IF NOT EXISTS `service` (
-  `id_service` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `service` (
+  `id_service` int(11) NOT NULL,
   `name` varchar(256) NOT NULL,
   `description` text NOT NULL,
   `price` double NOT NULL,
   `id_user_creator` int(11) NOT NULL,
   `id_user_editor` int(11) DEFAULT NULL,
   `edited_date` datetime DEFAULT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_service`),
-  KEY `Service_User_FK` (`id_user_creator`),
-  KEY `Service_User_FKv1` (`id_user_editor`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -163,17 +160,15 @@ CREATE TABLE IF NOT EXISTS `service` (
 --
 
 DROP TABLE IF EXISTS `sign`;
-CREATE TABLE IF NOT EXISTS `sign` (
-  `id_sign` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `sign` (
+  `id_sign` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `route_key_public` text NOT NULL,
   `route_key_private` text NOT NULL,
   `due_date` datetime NOT NULL,
   `edited_date` datetime DEFAULT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_sign`),
-  KEY `sign_Institute_FK` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -182,10 +177,9 @@ CREATE TABLE IF NOT EXISTS `sign` (
 --
 
 DROP TABLE IF EXISTS `student`;
-CREATE TABLE IF NOT EXISTS `student` (
+CREATE TABLE `student` (
   `id_user` int(11) NOT NULL,
-  `birthdate` datetime NOT NULL,
-  PRIMARY KEY (`id_user`)
+  `birthdate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -195,12 +189,10 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 DROP TABLE IF EXISTS `transactions`;
-CREATE TABLE IF NOT EXISTS `transactions` (
+CREATE TABLE `transactions` (
   `id_contract` int(11) NOT NULL,
   `id_document` int(11) NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_contract`,`id_document`),
-  KEY `Transactions_Document_FK` (`id_document`)
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -210,19 +202,159 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 --
 
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
   `name` varchar(256) NOT NULL,
   `lastname` varchar(256) NOT NULL,
   `dni` varchar(8) NOT NULL,
   `phone` varchar(32) NOT NULL,
   `email` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
-  `role` int(11) NOT NULL,
+  `id_role` int(11) NOT NULL,
   `edited_date` datetime DEFAULT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `certificate`
+--
+ALTER TABLE `certificate`
+  ADD PRIMARY KEY (`id_certificate`),
+  ADD KEY `Certificate_Document_FK` (`id_document`),
+  ADD KEY `Certificate_sign_FK` (`sign_id_sign`);
+
+--
+-- Indices de la tabla `contract`
+--
+ALTER TABLE `contract`
+  ADD PRIMARY KEY (`id_contract`),
+  ADD KEY `Contract_Payment_FK` (`id_payment`),
+  ADD KEY `Contract_Service_FK` (`id_service`);
+
+--
+-- Indices de la tabla `document`
+--
+ALTER TABLE `document`
+  ADD PRIMARY KEY (`id_document`),
+  ADD KEY `Document_Document_FK` (`id_document_before`),
+  ADD KEY `Document_Institute_FK` (`id_institute`),
+  ADD KEY `Document_Student_FK` (`id_student`);
+
+--
+-- Indices de la tabla `institute`
+--
+ALTER TABLE `institute`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- Indices de la tabla `node_user`
+--
+ALTER TABLE `node_user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- Indices de la tabla `payment`
+--
+ALTER TABLE `payment`
+  ADD PRIMARY KEY (`id_payment`),
+  ADD KEY `Payment_User_FK` (`id_user`);
+
+--
+-- Indices de la tabla `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`id_role`);
+
+--
+-- Indices de la tabla `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`id_service`),
+  ADD KEY `Service_User_FK` (`id_user_creator`),
+  ADD KEY `Service_User_FKv1` (`id_user_editor`);
+
+--
+-- Indices de la tabla `sign`
+--
+ALTER TABLE `sign`
+  ADD PRIMARY KEY (`id_sign`),
+  ADD KEY `sign_Institute_FK` (`id_user`);
+
+--
+-- Indices de la tabla `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- Indices de la tabla `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id_contract`,`id_document`),
+  ADD KEY `Transactions_Document_FK` (`id_document`);
+
+--
+-- Indices de la tabla `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `User_Role_FK` (`id_role`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `certificate`
+--
+ALTER TABLE `certificate`
+  MODIFY `id_certificate` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `contract`
+--
+ALTER TABLE `contract`
+  MODIFY `id_contract` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `document`
+--
+ALTER TABLE `document`
+  MODIFY `id_document` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `payment`
+--
+ALTER TABLE `payment`
+  MODIFY `id_payment` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `role`
+--
+ALTER TABLE `role`
+  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `service`
+--
+ALTER TABLE `service`
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `sign`
+--
+ALTER TABLE `sign`
+  MODIFY `id_sign` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -293,6 +425,12 @@ ALTER TABLE `student`
 ALTER TABLE `transactions`
   ADD CONSTRAINT `Transactions_Contract_FK` FOREIGN KEY (`id_contract`) REFERENCES `contract` (`id_contract`),
   ADD CONSTRAINT `Transactions_Document_FK` FOREIGN KEY (`id_document`) REFERENCES `document` (`id_document`);
+
+--
+-- Filtros para la tabla `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_role`) REFERENCES `role` (`id_role`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
