@@ -103,7 +103,7 @@ class Rest{
 		header("Access-Control-Allow-Origin: *");
 		header("Access-Control-Allow-Headers: t, t2, dif, st, hash, hora, *");
 		header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS, *");
-		header("X-Powered-By: K3nnY-G");header("Content-Type:application/json");
+		header("X-Powered-By: SPPARH-TEAM");header("Content-Type:application/json");
 		header("HTTP/1.1 ".$this->code);
 		$response=[
 			'status' => $this->code,

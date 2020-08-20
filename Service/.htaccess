@@ -4,7 +4,7 @@ RewriteEngine On    # Turn on the rewriting engine
 RewriteRule ajax web/ajax.php
 RewriteRule api/v1 api/v1/service.php
 RewriteRule api/v2 api/v2/service.php
-RewriteRule login web/index.php
+#RewriteRule login web/index.php
 RewriteRule home web/index.php
-RewriteRule exit web/index.php
-RewriteRule edit web/index.php
+#RewriteRule exit web/index.php
+#RewriteRule edit web/index.php

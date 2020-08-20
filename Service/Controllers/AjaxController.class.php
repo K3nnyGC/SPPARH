@@ -25,6 +25,9 @@ class AjaxController extends Controller {
         //Elegir servicio (CN)
         if ($t !== false) {
             switch ($t) {
+                case 'document':
+                    new ApiDocumentSubController($f);
+                    break;
                 default:
                     $this->response(200,["ok" => false , "message" => "Api Invalida" ]);
                     break;
