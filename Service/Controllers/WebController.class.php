@@ -40,10 +40,10 @@ class WebController extends Controller {
                 break;
             }
         } else {
-            if (!Auth::isOnline()) {
+            /*if (!Auth::isOnline()) {
                 header("location: " . RAIZ . "login");
                 exit();
-            }
+            }*/
         }
     }
 

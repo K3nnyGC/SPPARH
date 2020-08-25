@@ -42,10 +42,11 @@ class SubController {
 
     protected function validatePostParameters($variables){ // Parametros enviados por post
         $parametros = Service::getParameters();
+        $this->checkData($parametros,"Required Json Data");
         foreach ($variables as $key => $value) {
             $atributo = isset($parametros[$value]) ? $parametros[$value] : "";
-            if ($atributo == "") {
-                $this->response(200,["ok" => false, "message" => "Wrong Parameters", "parametros" => $parametros]);
+            if ($atributo === "") {
+                $this->response(400,["ok" => false, "message" => "Missing or Wrong Parameter", "parameter" => $value]);
             }
         }
         return $parametros;
@@ -53,16 +54,17 @@ class SubController {
 
     protected function validateFormParameters($variables){
         $parametros = Service::getPostValues();
+        $this->checkData($parametros,"Required form-data");
         foreach ($variables as $key => $value) {
             $atributo = isset($parametros[$value]) ? $parametros[$value] : "";
             if ($atributo === "") {
-                $this->response(200,["ok" => false, "message" => "Wrong Parameters", "parametros" => $parametros]);
+                $this->response(400,["ok" => false, "message" => "Missing or Wrong Parameter", "parameter" => $value]);
             }
         }
         return $parametros;
     }
 
-    private function toAnonimusClass($obj,$params,$pseudonime){
+    public function toAnonimusClass($obj,$params,$pseudonime){
         $newObj = new Vacio();
         foreach ($params as $key => $value) {
             $newObj->{$pseudonime[$key]} = $obj->{$value};
@@ -85,6 +87,15 @@ class SubController {
             } else {
                 $this->response(404,[ "ok" => false,"sms" => "Forbidden" ]);
             }
+        }
+    }
+
+    protected function checkData($data,$message){
+        if( is_null($data) ){
+            $this->response(415,[ "ok" => false,"message" => $message ]);
+        }
+        if(count($data) == 0){
+            $this->response(415,[ "ok" => false,"message" => $message ]);
         }
     }
 

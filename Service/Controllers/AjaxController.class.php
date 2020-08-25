@@ -25,7 +25,7 @@ class AjaxController extends Controller {
         //Elegir servicio (CN)
         if ($t !== false) {
             switch ($t) {
-                case 'document':
+                case 'documents':
                     new ApiDocumentSubController($f);
                     break;
                 default:
@@ -51,7 +51,8 @@ class AjaxController extends Controller {
         if (isset($values[DEEP_ROOT+1])) {
             return $values[DEEP_ROOT+1];
         } else {
-            $this->response(200,["ok" => false , "message" => "No se ha indicado accion" ]);
+            //$this->response(200,["ok" => false , "message" => "No se ha indicado accion" ]);
+            return "";
         }
     }
 
