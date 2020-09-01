@@ -29,6 +29,19 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_role" id="A568415D-4F8F-F7F7-D406-8146B32F2B58">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>058B1899-6ADD-7591-A0E4-728DF3DA1DFC</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>0C0B6D29-9F14-3978-2869-1B2A5CACB016</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="ADCD5D76-C9CC-E23D-7D02-5076EA977A40" name="Node_user PK">
@@ -41,6 +54,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>704A2A5B-80A8-F39C-7917-864C44DFD4C3</attributeRef>
+<attributeRef>A568415D-4F8F-F7F7-D406-8146B32F2B58</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

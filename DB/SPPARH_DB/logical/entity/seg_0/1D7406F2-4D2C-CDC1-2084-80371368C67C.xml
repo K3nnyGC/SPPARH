@@ -103,6 +103,19 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_role" id="71B82C2D-D7B5-BA35-0D44-3F5EE6996C2D">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>E92C33A7-8792-61BA-94A5-683BB1A8BFD6</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>ADD804F8-E637-B34D-3416-509B4F13E0F4</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="67C23902-1017-7CE6-45C0-7801B1BB74A2" name="sign PK">

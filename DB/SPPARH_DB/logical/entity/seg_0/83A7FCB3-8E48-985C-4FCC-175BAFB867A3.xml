@@ -81,6 +81,19 @@
 <dataTypeSize>256 CHAR</dataTypeSize>
 <ownDataTypeParameters>256 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_role" id="ADD804F8-E637-B34D-3416-509B4F13E0F4">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>B4D4C711-C222-DD53-C192-208754F19044</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>0C0B6D29-9F14-3978-2869-1B2A5CACB016</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="70C28C0F-4126-D456-3251-0373B5082FA2" name="Institute PK">
@@ -93,6 +106,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>8E7E641F-8E37-6F66-D9DC-05A2238F273F</attributeRef>
+<attributeRef>ADD804F8-E637-B34D-3416-509B4F13E0F4</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -119,6 +119,33 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_role" id="D9510665-57C5-BA4D-E00B-D8DEF88539BE">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>86791373-F47A-75F1-DF32-E225BB55443A</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>0C0B6D29-9F14-3978-2869-1B2A5CACB016</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_role1" id="76E2365F-A49F-7F60-D5B0-6C551B3EBBFA">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>7551D5AB-5D98-DC97-CBAF-C9985792D7FE</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>0C0B6D29-9F14-3978-2869-1B2A5CACB016</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="B47A3695-2890-9052-A6EE-F48FA0048138" name="Service PK">

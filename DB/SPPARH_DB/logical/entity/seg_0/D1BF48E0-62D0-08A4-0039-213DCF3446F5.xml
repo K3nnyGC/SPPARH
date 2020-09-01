@@ -157,6 +157,33 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_role" id="8BD063E1-C790-9818-71B8-88A22B9C1D91">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>515D6335-2C70-DB95-254D-2C57C858A861</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>488E094C-8098-D2B3-2C3A-A4F6EA2ACEEC</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_role1" id="A6914D51-176E-8D05-A3C8-81B60340521F">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>6994A5B2-DB7C-C2E4-A313-F2DD99C9A61E</generatorID>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<referedAttribute>ADD804F8-E637-B34D-3416-509B4F13E0F4</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1B6E4AEB-2F84-B31F-36B9-AD1E933BD594" name="document PK">

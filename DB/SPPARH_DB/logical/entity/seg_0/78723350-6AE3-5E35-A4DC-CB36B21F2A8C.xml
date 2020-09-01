@@ -106,6 +106,19 @@
 <dataTypeSize>256 CHAR</dataTypeSize>
 <ownDataTypeParameters>256 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="role" id="B864D436-B569-30AB-B3FE-A3B3E6A165D1">
+<createdBy>Kenny</createdBy>
+<createdTime>2020-08-16 18:38:35 UTC</createdTime>
+<ownerDesignName>SPPARH_DB</ownerDesignName>
+<engineerTo>
+<item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="edited_date" id="3EC2B442-DB2D-B798-A704-EDB073F45E4C">
 <createdBy>Kenny</createdBy>
 <createdTime>2020-08-16 17:46:23 UTC</createdTime>
@@ -131,15 +144,15 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="role" id="B864D436-B569-30AB-B3FE-A3B3E6A165D1">
+<Attribute name="id_role" id="0C0B6D29-9F14-3978-2869-1B2A5CACB016">
 <createdBy>Kenny</createdBy>
-<createdTime>2020-08-16 18:38:35 UTC</createdTime>
+<createdTime>2020-08-27 14:58:57 UTC</createdTime>
+<generatorID>23B171A8-4EF8-F5D4-3E79-BF071210458E</generatorID>
 <ownerDesignName>SPPARH_DB</ownerDesignName>
 <engineerTo>
 <item key="1C95DDAF-E40E-EFEE-77A1-337C26CEEFBE" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
+<referedAttribute>52E52B66-E44F-B18F-09F3-615A47B31A70</referedAttribute>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -157,6 +170,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>474E2BD4-9673-1523-A714-3AF800DFFBC3</attributeRef>
+<attributeRef>0C0B6D29-9F14-3978-2869-1B2A5CACB016</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
