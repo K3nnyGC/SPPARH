@@ -1,7 +1,7 @@
 <?php
 #Todas las funciones relacionadas con las variables del sistema GET POST SESSION
 class Service{
-
+    public static $parameters = null;
     private static $_instance;
 
     private function __construct(){
@@ -126,7 +126,8 @@ class Service{
     }
     
     public static function getParameters(){
-        return json_decode(file_get_contents('php://input'),true);
+        self::$parameters = self::$parameters ? self::$parameters : json_decode(file_get_contents('php://input'),true);
+        return self::$parameters;
     }
 
     public static function getHeaders(){

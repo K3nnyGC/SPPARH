@@ -92,7 +92,7 @@ class ApiDocumentSubController extends SubController {
     public function show($id){
         $id_num = intval($id) + 0;
         $dm = new DocumentManager();
-        if($id > 0) {
+        if($id_num > 0) {
             $documents = $dm->showAttr(["*"],$dm->id_criteria,"id_document = {$id_num} AND status < 2");
             if(count($documents) == 0){
                 $this->response(404,[ "ok" => false]);

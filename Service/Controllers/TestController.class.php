@@ -34,6 +34,13 @@ class TestController extends Controller {
 		self::$num++;
 	}
 
+	public function createByJson($params){
+		$api = $this->api;
+		$curl = new MyCurl($api,"POST");
+		$this->printString($curl->postData($params),"POST",$api);
+		self::$num++;
+	}
+
 	public function update($id,$params){
 		$api = $this->api . "/{$id}";
 		$curl = new MyCurl($api,"PUT");

@@ -66,7 +66,7 @@ class MyCurl{
 	public function postData($data=[]){
 		$st = json_encode($data);
 		$curl = curl_init();
-
+		//var_dump($st);
 		curl_setopt_array($curl, array(
 		  CURLOPT_URL => $this->api ,
 		  CURLOPT_RETURNTRANSFER => true,
@@ -77,10 +77,11 @@ class MyCurl{
 		  CURLOPT_CUSTOMREQUEST => $this->method,
 		  CURLOPT_HTTPHEADER => array(
 		    "cache-control: no-cache",
-		    "Conten-Type: multipart/form-data"
+		    "Conten-Type: application/json"
 		  ),
-		  CURLOPT_POSTFIELDS => $st 
+		  CURLOPT_POSTFIELDS => $st
 		));
+		//curl_setopt($curl, CURLOPT_POSTFIELDS, $st);//
 
 		$output =  $this->response($curl);
 		curl_close($curl);

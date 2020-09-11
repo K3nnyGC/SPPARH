@@ -28,6 +28,9 @@ class AjaxController extends Controller {
                 case 'documents':
                     new ApiDocumentSubController($f);
                     break;
+                case 'users':
+                    new ApiUserSubController($f);
+                    break;
                 default:
                     $this->response(200,["ok" => false , "message" => "Api Invalida" ]);
                     break;

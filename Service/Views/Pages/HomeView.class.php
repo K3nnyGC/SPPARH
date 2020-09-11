@@ -32,6 +32,14 @@ class HomeView extends View {
 					<li><strong>PUT</strong> <?= RAIZ ?>api/v2/documents/{id}</li>
 					<li><strong>DELETE</strong> <?= RAIZ ?>api/v2/documents/{id}</li>
 				</ul>
+				<p>Usuarios</p>
+				<ul>
+					<li><strong>GET</strong> <?= RAIZ ?>api/v2/users</li>
+					<li><strong>GET</strong> <?= RAIZ ?>api/v2/users/{id}</li>
+					<li><strong>POST</strong> <?= RAIZ ?>api/v2/users</li>
+					<li><strong>PUT</strong> <?= RAIZ ?>api/v2/users/{id}</li>
+					<li><strong>DELETE</strong> <?= RAIZ ?>api/v2/users/{id}</li>
+				</ul>
 			</div>
 		</div>
 		<style>

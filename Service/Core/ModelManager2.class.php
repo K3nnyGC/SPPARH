@@ -288,6 +288,52 @@ class ModelManager2 extends Conection2 {
 		return $salida;
 	}
 
+	//Soporte para SP
+
+	public function execSP($sp,$params){
+		$query = "CALL {$sp}(";
+		$coma = "";
+		foreach ($params as $key => $value) {
+			$query.= $coma . '?';
+			$coma = ",";
+		}
+		$query.= ")";
+
+		$vari = $params;
+		$cadena = array();
+		$values = array();
+		for ($i=0; $i < count($vari) ; $i++) {
+			$cadena[] = is_string($vari[$i]) ? "s" : "i";
+			$values[] = $vari[$i];
+		}
+
+		/*var_dump($cadena);
+		var_dump($values);
+		var_dump($query);
+		exit();*/
+
+		$result = $this->ResultPrepare($cadena,$values,$query);
+
+		if ($result) {
+			$matriz = [];
+			while ($row = $result->fetch_assoc()) {
+				if(isset($row['Level'])){
+					$modelo = new Vacio();
+				} else {
+					$modelo = new $this->class();
+				}
+				foreach ($row as $key => $value) {
+						$modelo
+							->setAttr("$key",$value);	
+				}
+				$matriz[] = $modelo;
+			}
+			return $matriz;
+		} else {
+			return false;
+		}
+	}
+
 }
 
 ?>

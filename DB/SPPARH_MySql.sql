@@ -22,6 +22,141 @@ SET time_zone = "+00:00";
 -- Base de datos: `u494946663_spparh`
 --
 
+DELIMITER $$
+--
+-- Procedimientos
+--
+DROP PROCEDURE IF EXISTS `institute_create_sp`$$
+CREATE PROCEDURE `institute_create_sp`(IN `name` VARCHAR(256), IN `lastname` VARCHAR(256), IN `dni` VARCHAR(8), IN `phone` VARCHAR(32), IN `email` VARCHAR(256), IN `password` VARCHAR(256), IN `RUC` VARCHAR(21), IN `legal_name` VARCHAR(256), IN `comercial_name` VARCHAR(256), IN `address` VARCHAR(256))
+    DETERMINISTIC
+    COMMENT 'Crear Usuario'
+BEGIN
+ 
+    DECLARE exit handler for sqlexception
+      BEGIN
+        -- ERROR
+        ROLLBACK;
+        SHOW ERRORS LIMIT 1;
+    END;
+   
+    DECLARE exit handler for sqlwarning
+      BEGIN
+        -- WARNING
+        ROLLBACK;
+        SHOW WARNINGS LIMIT 1;
+    END;
+ 
+    START TRANSACTION;
+      INSERT INTO `user`(`name`, `lastname`, `dni`, `phone`, `email`, `password`, `id_role`)
+      VALUES (name,lastname,dni,phone,email,password,1);
+                
+      INSERT INTO `institute`(`id_user`, `RUC`, `legal_name`, `comercial_name`, `address`)
+      VALUES(last_insert_id( ),RUC,legal_name,comercial_name,address);
+      
+                        
+      SELECT  *  FROM `user`, `institute` WHERE `user`.id_user = `institute`.id_user ORDER BY 1 DESC LIMIT 1;
+    COMMIT;
+  END$$
+
+DROP PROCEDURE IF EXISTS `institute_edit_sp`$$
+CREATE PROCEDURE `institute_edit_sp`(IN `id_user_n` INT, IN `name` VARCHAR(256), IN `lastname` VARCHAR(256), IN `dni` VARCHAR(8), IN `phone` VARCHAR(32), IN `email` VARCHAR(256), IN `password` VARCHAR(256), IN `RUC` VARCHAR(21), IN `legal_name` VARCHAR(256), IN `comercial_name` VARCHAR(256), IN `address` VARCHAR(256))
+    DETERMINISTIC
+    COMMENT 'Editar Usuario'
+BEGIN
+ 
+    DECLARE exit handler for sqlexception
+      BEGIN
+        -- ERROR
+        ROLLBACK;
+        SHOW ERRORS LIMIT 1;
+    END;
+   
+    DECLARE exit handler for sqlwarning
+      BEGIN
+        -- WARNING
+        ROLLBACK;
+        SHOW WARNINGS LIMIT 1;
+    END;
+ 
+    START TRANSACTION;
+      UPDATE `user`
+      SET `name`=name,`lastname`=lastname,`dni`=dni,`phone`=phone,`email`=email,`password`= password, `edited_date`=now() WHERE `id_user` = id_user_n;
+
+      UPDATE `institute` SET `RUC`=RUC,`legal_name`= legal_name,`comercial_name`= comercial_name,`address`= address WHERE `id_user` = id_user_n;                
+      SELECT  *  FROM `user`, `institute` WHERE `user`.id_user = `institute`.id_user AND `user`.id_user = id_user_n  ORDER BY 1 DESC LIMIT 1;
+    COMMIT;
+  END$$
+
+DROP PROCEDURE IF EXISTS `student_create_sp`$$
+CREATE PROCEDURE `student_create_sp`(
+  in name varchar(256),
+  in lastname varchar(256),
+  in dni varchar(8),
+  in phone varchar(32),
+  in email varchar(256),
+  in password varchar(256),
+  in birthdate datetime
+)
+    DETERMINISTIC
+    COMMENT 'Crear Usuario'
+BEGIN
+  DECLARE exit handler for sqlexception
+    BEGIN
+      -- ERROR
+      ROLLBACK;
+      SHOW ERRORS LIMIT 1;
+  END;
+   
+  DECLARE exit handler for sqlwarning
+  BEGIN
+    -- WARNING
+    ROLLBACK;
+    SHOW WARNINGS LIMIT 1;
+  END;
+ 
+  START TRANSACTION;
+    INSERT INTO `user`(`name`, `lastname`, `dni`, `phone`, `email`, `password`, `id_role`)
+    VALUES (name,lastname,dni,phone,email,password,1);
+                
+    INSERT INTO `institute`(`id_user`, `birthdate`)
+    VALUES(last_insert_id( ),birthdate);
+      
+                        
+    SELECT  *  FROM `user`, `student` WHERE `user`.id_user = `student`.id_user ORDER BY 1 DESC LIMIT 1;
+  COMMIT;
+END$$
+
+DROP PROCEDURE IF EXISTS `student_edit_sp`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `student_edit_sp`(IN `id_user_n` INT, IN `name` VARCHAR(256), IN `lastname` VARCHAR(256), IN `dni` VARCHAR(8), IN `phone` VARCHAR(32), IN `email` VARCHAR(256), IN `password` VARCHAR(256), IN `birthdate` DATETIME)
+    DETERMINISTIC
+    COMMENT 'Crear Usuario'
+BEGIN
+  DECLARE exit handler for sqlexception
+    BEGIN
+      -- ERROR
+      ROLLBACK;
+      SHOW ERRORS LIMIT 1;
+  END;
+   
+  DECLARE exit handler for sqlwarning
+  BEGIN
+    -- WARNING
+    ROLLBACK;
+    SHOW WARNINGS LIMIT 1;
+  END;
+ 
+  START TRANSACTION;
+    UPDATE `user` SET `name`=name,`lastname`=lastname,`dni`=dni,`phone`=phone,`email`=email,`password`=password, `edited_date`=now() WHERE `id_user` = id_user_n;
+
+    UPDATE `student` SET `birthdate`= birthdate WHERE `id_user` = id_user_n; 
+      
+                        
+    SELECT  *  FROM `user`, `student` WHERE `user`.id_user = `student`.id_user AND `user`.id_user = id_user_n;
+  COMMIT;
+END$$
+
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
