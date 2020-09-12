@@ -11,9 +11,9 @@ class ApiUserSubController extends SubController {
      */
     public function __construct($fun){
         parent::__construct();
+        $this->routerDirect($fun);
         $this->router($fun);
-        
-        
+            
     }
 
     protected function router($fun){
@@ -40,7 +40,17 @@ class ApiUserSubController extends SubController {
         $this->response(200,[ "ok" => false,"response" => "Function dont exist"]);
     }
 
+    protected function routerDirect($fun){
+        switch ($fun) {
+            case 'login':
+                $this->login();
+                break;
+            default:
+                break;
+        }
+    }
 
+    //Classic CRUD - Custom
     public function create(){
         //$this->setMethod("POST",true);
         //var_dump($_POST);
@@ -56,10 +66,12 @@ class ApiUserSubController extends SubController {
         }
         $this->searchError($result);
 
+
         if($result){
-            $this->response(201,[ "ok" => true,"user" => $pUser['name']]);
+            $user = $this->toAnonimusClass($result[0],['name','lastname','dni','phone','email','id_user','edited_date','created_date'],['name','lastname','dni','phone','email','id_user','edited_date','created_date']);
+            $this->response(201,[ "ok" => true,"user" => $user, "message" => "User Created", "tkn" => Auth::generateToken($user)]);
         } else {
-            $this->response(400,[ "ok" => false,"error" => Service::getErrorMsg()]);
+            $this->response(400,[ "ok" => false,"message" => Service::getErrorMsg()]);
         }
     }
 
@@ -84,7 +96,8 @@ class ApiUserSubController extends SubController {
         $this->searchError($result);
 
         if($result){
-            $this->response(201,[ "ok" => true,"user" => $pUser['name']]);
+            $user = $this->toAnonimusClass($result[0],['name','lastname','dni','phone','email','id_user','edited_date','created_date'],['name','lastname','dni','phone','email','id_user','edited_date','created_date']);
+            $this->response(201,[ "ok" => true,"user" => $user, "message" => "User Updated", "tkn" => "Pendiente...."]);
         } else {
             $this->response(400,[ "ok" => false,"error" => Service::getErrorMsg()]);
         }
@@ -124,7 +137,30 @@ class ApiUserSubController extends SubController {
         $this->response(401,[ "ok" => false,"message" => "User Can not be deleted"]);
     }
 
+    //Especial Functions
+    public function login(){
+        $this->setMethod("POST",true);
+        $pUser = $this->validatePostParameters(['email','password']);
 
+        $um = new UserManager();
+        $email = md5($pUser['email']);
+        $password = md5($pUser['password']);
+
+        $result = $um->showAttr(["*"],$um->id_criteria,"md5(email) = '{$email}'");
+        if(count($result) == 1){
+            $user = $result[0];
+            if($user->password == $password){
+                $user = $this->toAnonimusClass($user,['name','lastname','dni','phone','email','id_user','edited_date','created_date'],['name','lastname','dni','phone','email','id_user','edited_date','created_date']);
+                $this->response(200,[ "ok" => true,"user" => $user, "message" => "Authorizated", "tkn" => Auth::generateToken($user)]);
+            } else {
+                $this->response(400,[ "ok" => false, "message" => "Wrong Password"]);
+            }
+        } else {
+            $this->response(404,[ "ok" => false, "message" => "User dont Exist"]);
+        }
+    }
+
+    //Private Tools
     private function searchError($response){
         if($response === false){
             $this->response(500,[ "ok" => false,"message" => "Internal server error"]);

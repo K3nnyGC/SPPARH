@@ -31,11 +31,13 @@ class Auth {
 
 	//Token
 
-	static public function generateToken(){
-		$dat = md5("Cifrado Flush" . rand(189799765,989799765));
-		Service::setVarSession("token_service",$dat);
-		return $dat;
-	}
+	static public function generateToken($user){
+        $sessionVar = Service::getSessionValues();
+        $ip = Service::getIp();
+        $token = base64_encode($user->email . ':' .md5($user->id_user . $ip . $user->email . SECRETE));
+        //Service::setVarCookie('tokenUser',$token);
+        return isset($sessionVar['tokenUser']) ? $sessionVar['tokenUser'] : $token;
+    }
 
 	static public function checkToken($token){
 		$t = self::getToken();
