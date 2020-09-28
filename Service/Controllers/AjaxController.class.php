@@ -31,6 +31,12 @@ class AjaxController extends Controller {
                 case 'users':
                     new ApiUserSubController($f);
                     break;
+                case 'signs':
+                    new ApiSignSubController($f);
+                    break;
+                case 'certificates':
+                    new ApiCertificateSubController($f);
+                    break;
                 default:
                     $this->response(200,["ok" => false , "message" => "Api Invalida" ]);
                     break;

@@ -11,6 +11,7 @@ class ApiDocumentSubController extends SubController {
      */
     public function __construct($fun){
         parent::__construct();
+        $this->routerDirect($fun);
         $this->router($fun);
         
         
@@ -40,6 +41,16 @@ class ApiDocumentSubController extends SubController {
         $this->response(200,[ "ok" => false,"response" => "Function dont exist"]);
     }
 
+    protected function routerDirect($fun){
+        switch ($fun) {
+            case 'pending':
+                $this->getPendings();
+                break;
+            default:
+                break;
+        }
+    }
+
 
     public function create(){
         //$this->setMethod("POST",true);
@@ -66,14 +77,19 @@ class ApiDocumentSubController extends SubController {
     }
 
     public function update($id){
-        $params = $this->validatePostParameters(['id_institute','name','notes','emited_date','status']);
+        $user = Auth::getUserFromToken();
+        $params = $this->validatePostParameters(['name','notes','emited_date','status']);
         $id_num = intval($id) + 0;
         $dm = new DocumentManager();
         $document = $dm->findById($id_num);
         if (!$document) {
             $this->response(404,[ "ok" => false]);
         }
-        $document->id_institute = $params['id_institute'];
+        //Verificar si el doc enviado le pertenece a la institucion
+        if(!($user->id_user == $document->id_user)){
+            self::responseSt(401, ["ok"=>false, "message" => "Forbidden Request"]);
+        }
+        //$document->id_institute = $params['id_institute'];
         $document->id_student = isset($params['id_student']) ? $params['id_student'] : $document->id_student;
         $document->status = $params['status'];
         $document->name = $params['name'];
@@ -127,6 +143,49 @@ class ApiDocumentSubController extends SubController {
 
 
     private function createFile(){
+        if (isset($_FILES["file"])){
+            $file = $_FILES["file"];
+            $nombre = $file["name"];
+
+            $parts = explode(" ", $nombre);
+            $nombre = implode("_", $parts);
+
+            $tipo = $file["type"];
+            $ruta_provisional = $file["tmp_name"];
+            $size = $file["size"];
+
+            $carpeta = FILE_BASE . "Assets/files/documents/";
+
+            $hoy = getdate();
+            $fecha = "" . $hoy['year'] . "-" . $hoy['mon'] . "-" . $hoy['mday'];
+            $hora = "".$hoy['hours'] . ":" . $hoy['minutes'] . ":" . $hoy['seconds'];
+            $src = $carpeta.md5($nombre.$fecha.$hora).$nombre.".tmp";
+            move_uploaded_file($ruta_provisional, $src);
+            return ["name"=>$nombre, "rute"=>$src];
+        } else {
+            $this->response(400,[ "ok" => false,"error" => "Missing document"]);
+            return ["name"=>"", "rute"=>""];
+        }
+    }
+
+
+    //Especial Functions
+    public function getPendings(){
+        $this->setMethod("GET",true);
+        $user = Auth::getUserFromToken();
+        //var_dump($user);
+        $dm = new DocumentManager();
+        $docs = $dm->showAttr(["*"],$dm->id_criteria,"id_institute = {$user->id_user}");
+        $n_docs = [];
+        foreach ($docs as $key => $value) {
+            $doc = $this->toAnonimusClass($value,['id_document','id_student','name','notes','emited_date','status'],['id_document','id_student','name','notes','emited_date','status']);
+            $n_docs[] = $doc;
+        }
+        $this->response(200,[ "ok" => true,"documents" => $n_docs,"message" => "Documents pendings found"]);
+    }
+
+
+    static public function createDocumentFromFile(){
         if (isset($_FILES["file"])){
             $file = $_FILES["file"];
             $nombre = $file["name"];

@@ -18,7 +18,7 @@ class WebController extends Controller {
 
     private function ini(){
         //Genera token si no existe, la vista por defecto regenera el token, cualquier otra vista usa el token que ya existe o genera uno nuevo si no existe.
-        $this->generateTokenIfNotExist();
+        //$this->generateTokenIfNotExist();
 
         //Si no se esta logeado, se revisa la cookie por datos de usuairo
         //$this->tryLogin();
@@ -36,16 +36,32 @@ class WebController extends Controller {
         if ($page != "") {
             switch ($page) {
                 default:
-                    Auth::generateToken(); //Solo se genera en la pagina de inicio
+                    //Auth::generateToken(); //Solo se genera en la pagina de inicio
                 break;
             }
         } else {
+            $this->config1();
             /*if (!Auth::isOnline()) {
                 header("location: " . RAIZ . "login");
                 exit();
             }*/
         }
     }
+
+    //configuraciones
+    private function config1(){
+        $this->layout->cssFiles = [];
+        $this->layout->jsFiles = [];
+        $this->layout->jsFilesFooter = [];
+        $this->layout
+            ->setCss(["bootstrap"])
+            ->setJs(["imp/popper","imp/bootstrap"])
+            ->setJsFooter([]);    
+    }
+
+
+
+    //tools
 
 
 

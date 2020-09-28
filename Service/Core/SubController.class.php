@@ -99,6 +99,17 @@ class SubController {
         }
     }
 
+
+
+    /*Estaticos*/
+    public static function responseSt($code = 400, $data = ["error" => true]){
+        $rest = new Rest();
+        $rest->code = $code;
+        $rest->data = $data;
+        $rest->response();
+        exit();
+    }
+
 }
 
 ?>

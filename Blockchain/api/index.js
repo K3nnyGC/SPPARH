@@ -36,6 +36,17 @@ function getBalance(){
 	}).then( ()=>{console.log('balance',balance);} );
 }
 
+function validate(data,params){
+	let output = {ok:true};
+	params.forEach( item => {
+		if(data[item] === undefined){
+			output.missing = item;
+			output.ok = false;
+		}
+	});
+	return output;
+}
+
 
 //Métodos del contrato
 
@@ -63,6 +74,16 @@ function getCertificate(block,callback=null){
 						student: decodedData.params[1].value,
 						hash: decodedData.params[2].value,
 						date: decodedData.params[3].value
+					}
+				});
+			}
+		})
+		.catch( error => {
+			if(callback !== null){
+				callback({
+					ok: false,
+					data: {
+						message: "Dont exist"
 					}
 				});
 			}
@@ -107,17 +128,28 @@ app.get('/certificates/:id',(req, res)=> {
 });
 
 app.post('/certificates',(req, res)=> {
-	const cert = {
-		name : req.body.name,
-		hash : req.body.hash,
-		student : req.body.student,
-		date : req.body.date,
+	isComplete = validate(req.body,['name','hash','student','date']);
+	if(isComplete.ok){
+		const cert = {
+			name : req.body.name,
+			hash : req.body.hash,
+			student : req.body.student,
+			date : req.body.date,
+		}
+		setCertificate(cert.name,cert.hash,cert.student,cert.date, data => {
+			res.status(201);
+			res.json(data);
+		});
+	} else {
+		res.status(400);
+		res.json({
+			ok: false,
+			message: 'Missing or Wrong Parameter',
+			parameter: isComplete.missing
+		});
 	}
-	setCertificate(cert.name,cert.hash,cert.student,cert.date, data => {
-		res.status(201);
-		res.json(data);
-	});
 	//res.send('Metodo post');
+	//getBalance();
 });
 
 

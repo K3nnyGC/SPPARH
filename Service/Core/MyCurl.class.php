@@ -37,8 +37,8 @@ class MyCurl{
 
 	public function postForm($data=[]){
 		if(isset($data['file'])){
-			//$data['file'] = new CURLFile ( $data['file'] );
-			$data['file'] = '@' . $data['file'];
+			//$data['file'] = new CURLFile ( $data['file'] ); //php >= 5.5
+			$data['file'] = '@' . $data['file']; // php <= 5.4
 		}
 		$curl = curl_init();
 

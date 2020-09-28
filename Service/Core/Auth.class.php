@@ -39,6 +39,22 @@ class Auth {
         return isset($sessionVar['tokenUser']) ? $sessionVar['tokenUser'] : $token;
     }
 
+    static public function getUserFromToken(){
+    	if(!isset($_SERVER['PHP_AUTH_USER'])){
+    		SubController::responseSt(401, ["ok"=>false, "message" => "Missing or wrong Token"]);
+    	}
+		$mail = $_SERVER['PHP_AUTH_USER'];
+		$mail = md5($mail);
+		$tk = $_SERVER['PHP_AUTH_PW'];
+		$um = new UserManager();
+		$result = $um->showAttr(["*"],$um->id_criteria,"md5(email) = '{$mail}'");
+		if(count($result) == 1){
+			return $result[0];
+		} else {
+			SubController::responseSt(401, ["ok"=>false, "message" => "Forbidden Request"]);
+		}
+    }
+
 	static public function checkToken($token){
 		$t = self::getToken();
 		if ($t === $token) {
