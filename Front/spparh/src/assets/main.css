@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+.box-login {
+   box-shadow: 0 0 10px 0 #d4d4d4;
+   padding: 25px 20px 10px 20px;
+}
+
+.box-signup-text h1, p{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.bg-red-pink {
+    background-color: #FF5050;
+}
+
+.bg-greenv {
+    background-color: #41B883;
+}
+
+.bg-bluev {
+    background-color: #35495E;
+}

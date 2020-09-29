@@ -1,0 +1,20 @@
+{
+    "ok": true,
+
+    "data":{
+        "user":{
+            "user_id": 5,
+            "name": "Evelyn Ross",
+            "lastname": "Galarza Contreras",
+            "dni": "42964965",
+            "phone":"930488497",
+            "birthdate": "1985-05-20",
+            "email": "queteimporta@gmail.com"
+        },
+        "tkn":"7419jksdhjgds2525fhjdshj",
+        "message":"creado"
+
+    }
+
+    
+}
