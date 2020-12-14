@@ -1,7 +1,7 @@
 <template>
 
-<div>
-    <h5 class="text-white" >{{activeUser.name}}</h5>
+<div v-show="activeUser.name!= undefined" >
+    <h5 class="text-white">¡Hola {{activeUser.name}}!</h5>
 </div>
     
 </template>

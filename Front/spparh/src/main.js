@@ -6,18 +6,19 @@ import store from './store'
 import '@/assets/main.css'
 import Vuelidate from 'vuelidate'
 import 'animate.css/animate.min.css'
+
 import VuePaginate from 'vue-paginate'
 Vue.use(VuePaginate)
 
 Vue.use(Vuelidate)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars,  faFileMedical, faFileAlt, faFileSignature, faPowerOff, faBuilding, faPlusSquare, faCheckSquare, faEdit, faCog, faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons'
-import { faFile } from '@fortawesome/free-regular-svg-icons'
+import { faBars,  faFileMedical, faFileAlt, faFileSignature, faPowerOff, faBuilding, faPlusSquare, faCheckSquare, faEdit, faCog, faPlusCircle, faMinusCircle, faFileImport, faDownload, faEye} from '@fortawesome/free-solid-svg-icons'
+import { faFile} from '@fortawesome/free-regular-svg-icons'
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faFile, faBars, faFileMedical, faFileAlt, faFileSignature, faPowerOff, faBuilding, faPlusSquare, faCheckSquare, faEdit, faCog, faPlusCircle, faMinusCircle)
+library.add(faFile, faBars, faFileMedical, faFileAlt, faFileSignature, faPowerOff, faBuilding, faPlusSquare, faCheckSquare, faEdit, faCog, faPlusCircle, faMinusCircle, faFileImport, faDownload, faEye)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

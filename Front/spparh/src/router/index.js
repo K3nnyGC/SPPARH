@@ -34,14 +34,24 @@ const routes = [
     component: () => import(/* webpackChunkName: "validation" */ '../views/users/validation.vue')
   },
   {
-    path: '/certificates/pending',
-    name: 'Pending',
-    component: () => import(/* webpackChunkName: "pending" */ '../views/certificates/pending.vue')
+    path: '/institute/certificates/recieved',
+    name: 'Recieved',
+    component: () => import(/* webpackChunkName: "recieved" */ '../views/certificates/institutes/recieved.vue')
   },
   {
-    path: '/certificates/create',
-    name: 'Create',
-    component: () => import(/* webpackChunkName: "create" */ '../views/certificates/create.vue')
+    path: '/institute/certificates/pending',
+    name: 'Pending',
+    component: () => import(/* webpackChunkName: "pending" */ '../views/certificates/institutes/pending.vue')
+  },
+  {
+    path: '/institute/certificates/create',
+    name: 'CreateByInstitute',
+    component: () => import(/* webpackChunkName: "createbyinstitute" */ '../views/certificates/institutes/create.vue')
+  },
+  {
+    path: '/student/certificates/create',
+    name: 'CreateByStudent',
+    component: () => import(/* webpackChunkName: "createbystudent" */ '../views/certificates/students/create.vue')
   }
 ]
 

@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <!-- </transition> -->
-                <button type="submit" class="btn btn-primary btn-sm btn-block" @click="send()" :disabled="$v.validationGroupStudent.$invalid && $v.validationGroupInstitute.$invalid">Registrar</button>
+                <button type="submit"  class="btn btn-primary btn-sm btn-block" @click="send()" :disabled="$v.validationGroupStudent.$invalid && $v.validationGroupInstitute.$invalid">Registrar</button>
                 <div class="text-center mt-3">
                     <small class="text-muted">Al hacer clic en «Registrar», aceptas las <a href="#">Condiciones de uso</a>, la <a href="#">Política de privacidad</a> y la <a href="#">Política de cookies</a> de SPPARH.</small>
                 </div> 
@@ -122,7 +122,8 @@ export default {
                 {
                 value: 2, text:'Estudiante'
                 }
-            ]
+            ],
+        isActive: true
         }
   }, 
 
@@ -206,7 +207,7 @@ export default {
                     UIkit.notification('Bienvenido')
                     this.setToken(respond.tkn)
                     this.setUserOnStore(respond.user)
-                    this.goto('/certificates/create')
+                    this.goto('/institute/certificates/create')
               },()=>{},(err)=>{
                     UIkit.notification(err.response.data.message)
                     UIkit.notification(err.response.data.parameter)
@@ -215,26 +216,29 @@ export default {
           else
           {
               this.request(this.api + 'users', 'POST', {},{
-                    email: this.email,
-                    password: this.password,
                     name: this.name,
                     lastname: this.lastname,
                     dni: this.dni,
                     phone: this.phone,
-                    birthdate: this.birthdate,
-                    usertype: this.usertype
+                    email: this.email,
+                    password: this.password,
+                    type: this.usertype,
+                    birthdate: this.birthdate
               },
-              () => {
+              (respond) => {
                     UIkit.notification('¡Bienvenido!')
                     this.setToken(respond.tkn)
                     this.setUserOnStore(respond.user)
-                    this.goto('/certificates/create')
+                    this.goto('/student/certificates/create')
               },()=>{},(err)=>{
                     UIkit.notification(err.response.data.message)
+                    UIkit.notification(err.response.data.parameter)
+                    
+                     
               })
           }
 
-      }
+      }                          
   },
 
   mounted(){

@@ -47,4 +47,12 @@ export default {
 
 <style scoped>
 
+p{
+    cursor: pointer;
+}
+
+p:hover {
+    color:red;
+}
+
 </style>

@@ -56,6 +56,7 @@
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Actualizar estado:</label>
                                         <select class="form-select form-select-sm" v-model="tempUser.status" aria-label=".form-select-sm">
+                                        <!-- <select class="form-select form-select-sm" v-model="statusType" aria-label=".form-select-sm"> -->
                                             <option v-for="(option,index) in status" :value="option.value" :key="index+'statusaccount'">{{option.text}}</option>
                                         </select>
                                     </div>
@@ -82,7 +83,7 @@
 
 <script>
 
-import { required, minLength, maxLength, email, alphaNum, numeric } from 'vuelidate/lib/validators'
+import { required } from 'vuelidate/lib/validators'
 import mixinMethods from '@/mixins'
 import {mapState, mapMutations} from 'vuex'
 import Sidebar from '@/components/Sidebar.vue'
@@ -101,7 +102,7 @@ data: function () {
         tempUser:{
             dni:''
         },
-        statu:1,
+        //statusType:1,
         status:[
             {
                 value: 0, text:'Pendiente'
@@ -157,7 +158,7 @@ methods:{
     updateValidation () {
 
         if (this.tempUser.status == 1) {
-            this.request(this.api + 'users/institutes/approve/' + this.tempUser.id_user, 'PUT', {},{
+            this.request(this.api + 'users/institutes/approve/' + this.tempUser.id_user, 'PUT', {authorization: "Basic " + this.tkn},{
                 email: this.tempUser.email,
                 name: this.tempUser.name,
                 lastname: this.tempUser.lastname,
@@ -174,10 +175,9 @@ methods:{
                 UIkit.notification("<span uk-icon='icon: check'></span> Se actualizó cuenta.")             
             },()=>{},(err)=>{
                 UIkit.notification(err.message)
-                console.log(err)
             })        
         } else {
-            this.request(this.api + 'users/' + this.tempUser.id_user, 'PUT', {},{
+            this.request(this.api + 'users/' + this.tempUser.id_user, 'PUT', {authorization: "Basic " + this.tkn},{
                 email: this.tempUser.email,
                 name: this.tempUser.name,
                 lastname: this.tempUser.lastname,
@@ -194,7 +194,6 @@ methods:{
                 UIkit.notification("<span uk-icon='icon: check'></span> Se actualizó cuenta.")             
             },()=>{},(err)=>{
                 UIkit.notification(err.message)
-                console.log(err)
             })        
         }
 

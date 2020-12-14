@@ -22,7 +22,7 @@
                 <button type="submit" class="btn btn-primary btn-lg btn-block" @click="authenticate()" :disabled="$v.$invalid">Enviar</button>
                      
                 <div class="text-center mt-3">
-                    <small class="text-muted">No tienes una cuenta. <a href="#">¡Resgistrate!</a></small>
+                    <small class="text-muted">No tienes una cuenta. <a href="/users/register">¡Resgistrate!</a></small>
                 </div>                   
             </form>
         </div>      
@@ -79,18 +79,40 @@ validations: {
             this.setUserOnStore(respond.user)
                 if (respond.user.id_role == 1) {
                     UIkit.notification("¡Bienvenido!")
-                    this.goto('/certificates/create')
+                    this.goto('/institute/certificates/create')
                 }
                 else {
-                    if (respond.user.id_role == 3) {
+                    if (respond.user.id_role == 2) {
                         UIkit.notification("¡Bienvenido!")
-                        this.goto('/users/validation')
+                        this.goto('/student/certificates/create')
                     }else{
-                        UIkit.notification("La cuenta tipo estudiante estará habiliatda para el Sprint 3 :)")
-                    }
+                        if (respond.user.id_role == 3) {
+                            UIkit.notification("¡Bienvenido!")
+                            this.goto('/users/validation')
+                    }   }
                 }
+
+            // switch (respond.user.id_role) {
+            //     case 1:
+            //         UIkit.notification("¡Bienvenido!")
+            //         this.goto('/certificates/create')
+            //     break;
+
+            //     case 2:
+            //         UIkit.notification("¡Bienvenido!")
+            //         this.goto('/certificates/request')
+            //     break;
+
+            //     case 3:
+            //         UIkit.notification("¡Bienvenido!")
+            //         this.goto('/users/validation')
+            //     break;
+            // }
+
+
             },()=>{},(err)=>{
                 UIkit.notification(err.response.data.message)
+               
             })   
       }
   },
